@@ -6,13 +6,18 @@ class MemosController < ApplicationController
   end
   def create
     @room = Room.find(params[:room_id])
-    @memos = @room.memos.new(memo_params)
-    if @memos.save
+    @memo = @room.memos.new(memo_params)
+    if @memo.save
       redirect_to room_memos_path(@room)
     else
-      @memo = @room.memo.includes(:user)
+      @memos = @room.memos.includes(:user)
       render :index
     end
+  end
+  def destroy
+    room = Room.find(params[:id])
+    room.destroy
+    redirect_to root_path
   end
   private
 
