@@ -109,10 +109,11 @@
 
 .form {
   background-color: #eb0c0c;
-  height: 90px;
+  height: 80px;
   padding: 20px 40px;
-  display: flex;
-  
+}
+.form-form {
+  display: flex; 
 }
 .form-input {
   background-color: white;
