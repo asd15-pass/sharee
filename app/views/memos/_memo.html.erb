@@ -11,5 +11,6 @@
     <div class="memo-content">
       <%= memo.content %>
     </div>
+  <%= image_tag memo.image.variant(resize: '500x500'), class: 'memo-image' if memo.image.attached? %>
   </div>
 </div>
