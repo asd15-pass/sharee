@@ -1,9 +1,9 @@
 <div class='memo-room-form'>
-  <h1>新規チャットルーム</h1>
+  <h1>新規ルーム</h1>
   <%=form_with model: @room, local: true do |f|%>
     <div class='memo-room-form__field'>
       <div class='memo-room-form__field--left'>
-        <%= f.label :チャットルーム名, class: 'memo-room-form__label'%>
+        <%= f.label :ルーム名, class: 'memo-room-form__label'%>
       </div>
       <div class='memo-room-form__field--right'>
         <%= f.text_field :name, class: 'memo__room_name memo-room-form__input', placeholder: 'ルーム名を入力してください'%>
@@ -17,7 +17,7 @@
       </div>
       <div class='memo-room-form__field--right'>
       <select name="room[user_ids][]">
-          <option value="">チャットするユーザーを選択してください</option>
+          <option value="">共有するユーザーを選択してください</option>
           <% User.where.not(id: current_user.id).each do |user| %>
             <option value=<%= user.id %>><%= user.name %></option>
           <% end %>
