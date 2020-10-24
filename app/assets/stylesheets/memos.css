@@ -95,7 +95,13 @@
   color: #999;
   font-size: 12px;
   padding-left: 10px;
+  
 }
+.memo-delete{
+  font-size: 12px;
+  padding-left: 550px;
+}
+
 
 .lower-memo {
   margin-top: 10px;
@@ -103,8 +109,10 @@
 
 .memo-content {
   color: #434a54;
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .form {
