@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   root to: "top#index"
   resources :users, only: [:edit, :update]
   resources :rooms, only: [:new,:index, :create, :destroy] do
-    resources :memos, only: [:index, :create]
+    resources :memos, only: [:index, :create,:destroy]
   end
 end

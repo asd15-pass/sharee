@@ -15,13 +15,16 @@ class MemosController < ApplicationController
     end
   end
   def destroy
-    room = Room.find(params[:id])
-    room.destroy
-    redirect_to rooms_path
+    @user = current_user
+    @room = Room.find(params[:room_id])
+    memo = Memo.find(params[:id])
+    memo.destroy
+    redirect_to room_memos_path(@room.id)
+
   end
   private
 
   def memo_params
-    params.require(:memo).permit(:content, :image).merge(user_id: current_user.id)
+    params.require(:memo).permit(:content,:image).merge(user_id: current_user.id)
   end
 end

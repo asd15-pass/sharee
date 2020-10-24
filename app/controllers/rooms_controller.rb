@@ -6,6 +6,7 @@ class RoomsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @room = Room.new(room_params)
       if @room.save
         render :index
@@ -14,9 +15,10 @@ class RoomsController < ApplicationController
       end
   end
   def destroy
-    room = Room.find(params[:id])
+    @user = current_user
+    room = Room.find(params[:room_id])
     room.destroy
-    redirect_to rooms_path
+    redirect_to room_path
   end
     private
 
