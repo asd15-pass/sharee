@@ -1,5 +1,6 @@
 .account-page .account-page__inner {
   width: 980px;
+  height: 600px;
   margin: 60px auto;
   padding: 60px;
   background-color: #fff;
@@ -111,4 +112,8 @@
   margin: 0;
   padding: 0;
   font-size: 13px;
+}
+html {
+	background-color: transparent;
+	background-image: none;
 }
