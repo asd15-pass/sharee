@@ -9,7 +9,7 @@ class RoomsController < ApplicationController
     @user = current_user
     @room = Room.new(room_params)
       if @room.save
-        render :index
+        redirect_to rooms_path
       else
         render :new
       end
