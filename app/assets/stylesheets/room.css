@@ -1,6 +1,6 @@
 h1 {
   letter-spacing: 2px;
-  font-size: 24px;
+  font-size: 35px;
   font-weight: bold;
   text-align: center;
 }
@@ -24,7 +24,7 @@ li {
 }
 
 .memo-room-form {
-  width: 980px;
+  width: 1100px;
   margin: 60px auto;
   padding: 40px;
   background-color: #fff;
@@ -43,7 +43,8 @@ li {
   display: block;
   line-height: 50px;
   font-weight: bold;
-  text-align: right;
+  text-align: center;
+  font-size: 24px;
 }
 .memo-room-form__input {
   float: left;
@@ -58,9 +59,21 @@ li {
   color: #fff;
   background-color: #38aef0;
   border: 0;
+  border-radius: 4px;
+  transition: .4s;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  left:  95%;
+}
+.memo-room-form__action-btn:hover {
+  background-color:#f5b01c;
+  border-color: #f5b01c;
+  color: #FFF;
 }
 .memo-room-form__field {
   margin-top: 30px;
+  display: flex;
 }
 .memo-room-form__field:after {
   content: "";
@@ -96,7 +109,7 @@ li {
   float: left;
 }
 .memo-room-user__btn {
-  float: right;
+  /* float: right; */
   display: inline-block;
   cursor: pointer;
 }
@@ -124,4 +137,53 @@ select {
 }
 .field_with_errors {
   display: contents;
+}
+/* .memo-room-form__field--right {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: .4s;
+  background-color: #38aef0;
+  position: relative;
+  left: 85%;
+}  */
+.memo-room-form_-left {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: .4s;
+  background-color: #38aef0;
+  position: relative;
+  left: 93%;
+}
+.memo-room-form_-left:hover {
+  background-color:#f5b01c;
+  border-color: #f5b01c;
+  color: #FFF;
+}
+.btn{
+  color: #FFF;
+  text-decoration: none;
+}
+.delete_btn{
+  position: relative;
+  left:  73%;
+  top: -35px;
+}
+.delete_btn:hover {
+  background-color:#f5b01c;
+  border-color: #f5b01c;
+  color: #FFF;
+}
+.add_btn{
+  position: relative;
+  left:  73%;
+  top: -35px;
+}
+.add_btn:hover {
+  background-color:#f5b01c;
+  border-color: #f5b01c;
+  color: #FFF;
 }

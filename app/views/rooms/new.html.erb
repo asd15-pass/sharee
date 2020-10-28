@@ -1,36 +1,69 @@
-<div class='memo-room-form'>
-  <h1>新規ルーム</h1>
-  <%=form_with model: @room, local: true do |f|%>
-    <div class='memo-room-form__field'>
-      <div class='memo-room-form__field--left'>
-        <%= f.label :ルーム名, class: 'memo-room-form__label'%>
+    <div class='memo-room-form'>
+    <h1>新規ルーム</h1>
+    <%=form_with model: @room, local: true do |f|%>
+      <div class='memo-room-form__field'>
+        <div class='memo-room-form__field--left'>
+          <%= f.label :ルーム名, class: 'memo-room-form__label'%>
+        </div>
+        <div class='memo-room-form__field--right'>
+          <%= f.text_field :name, class: 'memo__room_name memo-room-form__input', placeholder: 'ルーム名を入力してください'%>
+        </div>
       </div>
-      <div class='memo-room-form__field--right'>
-        <%= f.text_field :name, class: 'memo__room_name memo-room-form__input', placeholder: 'ルーム名を入力してください'%>
+      <div class='memo-room-form__field'>
       </div>
-    </div>
-    <div class='memo-room-form__field'>
-    </div>
-    <div class='memo-room-form__field'>
-      <div class='memo-room-form__field--left'>
-        <label class='memo-room-form__label' for='memo_room_メモのメンバー'>メンバー</label>
+      <div class='memo-room-form__field'>
+        <div class='memo-room-form__field--left'>
+          <label class='memo-room-form__label' for='memo_room_メモのメンバー'>メンバー</label>
+        </div>
+        <div id="form_area" class ='memo-room-form__field--right'>
+            <select id="inputform_0" name="room[user_ids][]">
+              <option value="">共有するユーザーを選択してください</option>
+                <% User.where.not(id: current_user.id).each do |user| %>
+              <option value=<%= user.id %>><%= user.name %></option>
+              <% end %>
+            </select>
+             <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+            <div class = "edit_btn">
+              <input class="add_btn" type="button" value="＋" onclick="addForm()"> 
+              <button class="delete_btn" id="0" onclick="deleteBtn(this)">ー</button>
+            </div>
+        </div>
       </div>
-      <div class='memo-room-form__field--right'>
-      <select name="room[user_ids][]">
-          <option value="">共有するユーザーを選択してください</option>
-          <% User.where.not(id: current_user.id).each do |user| %>
-            <option value=<%= user.id %>><%= user.name %></option>
-          <% end %>
-        </select>
-        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+      <div class='memo-room-form__field'>
+        <div class='memo-room-form_-left'>
+         <%= link_to "戻る", :back, class: 'btn'%>
+        </div>
+        <div class='memo-room-form__field--right'>
+          <%= f.submit  class: 'memo-room-form__action-btn'%>
+        </div>
       </div>
-    </div>
-    <div class='memo-room-form__field'>
-      <div class='memo-room-form__field--left'></div>
-      <%= link_to "戻る", :back, class: 'btn'%>
-      <div class='memo-room-form__field--right'>
-        <%= f.submit class: 'memo-room-form__action-btn'%>
-      </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>  
+  <script>
+var i = 1 ;
+function addForm() {
+  var src = document.getElementById("inputform_0");
+  var copy = src.cloneNode(true);
+  copy.id = 'inputform_' + i;
+  var parent = document.getElementById('form_area');
+  parent.appendChild(copy);
+
+  var button_data = document.createElement('button');
+  button_data.id = i;
+  button_data.onclick = function(){deleteBtn(this);}
+  button_data.innerHTML = '削除';
+  var input_area = document.getElementById(src.id);
+  parent.appendChild(button_data);
+  
+  i++ ;
+}
+
+function deleteBtn(target) {
+  var target_id = target.id;
+  var parent = document.getElementById('form_area');
+  var ipt_id = document.getElementById('inputform_' + target_id);
+  var tgt_id = document.getElementById(target_id);
+  parent.removeChild(ipt_id);
+  parent.removeChild(tgt_id);	
+}
+</script>
