@@ -59,3 +59,6 @@ gem 'image_processing', '~> 1.2'
 gem 'rspec-rails'
 gem 'factory_bot_rails'
 gem 'faker'
+group :production do
+  gem 'rails_12factor'
+end
