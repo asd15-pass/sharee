@@ -115,8 +115,9 @@ animation: typing 5s steps(11, end), caret .5s step-end infinite;
   overflow: hidden;
   animation: textRevealAnim 2s ease 0.5s forwards,
     borderOpacityAnim 2s ease 0.5s forwards;
-    font-family: 'Noto Serif JP', sans-serif;
+    font-family: "Yu Gothic", "游ゴシック", "游ゴシック体";
     color: #fff;
+    font-size: 25px;
 }
 
 .textReveal > div > div {

@@ -1,10 +1,10 @@
 .account-page .account-page__inner {
-  width: 980px;
-  height: 600px;
-  margin: 60px auto;
+  width: 1000px;
+  height: 550px;
+  margin:  70px  auto;
   padding: 60px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color:bisque;
+  border: 1px solid bisque;
   border-radius: 5px;
 }
 .account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
@@ -27,7 +27,6 @@
   display: block;
   width: 60px;
   margin-top: 5px;
-  border-bottom: 1px solid #38aef0;
 }
 .account-page .account-page__header h5 {
   margin-bottom: 20px;
@@ -35,11 +34,17 @@
   font-weight: 200;
 }
 .account-page .account-page__header .btn {
-  margin-top: 20px;
+  margin-top: 250px;
   color: #fff;
-  background-color: #ccc;
+  background-color:#33ceda;
   font-size: 14px;
+  margin-right: 10px;
+  transition: .4s;
 }
+.account-page .account-page__header .btn:hover{
+    background-color:  #f5b01c;
+}
+
 .account-page .field {
   margin-bottom: 10px;
 }
@@ -69,9 +74,13 @@
 }
 .account-page input[type=submit] {
   float: left;
-  margin-top: 20px;
+  margin: 20px ;
   color: #fff;
-  background-color: #38aef0;
+  background-color: #33ceda;
+  transition: .4s;
+}
+.account-page input[type=submit]:hover{
+  background-color:  #f5b01c;
 }
 .account-page .field-label .field_with_errors {
   display: inline-block;
@@ -116,4 +125,20 @@
 html {
 	background-color: transparent;
 	background-image: none;
+}
+.back__btn a{
+  margin-top: 370px ;
+  position: relative;
+  right: 30px;
+  display: inline-block;
+  background-color: #33ceda;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .4s;
+  color: #fff;
+}
+.back__btn a:hover {
+  background-color: #f5b01c;
+  border-color: #f5b01c;
 }
