@@ -3,9 +3,6 @@
     <div class="header-title">
      <%= @room.name %>
     </div>
-    <div class="room-member">
-       <%=@room.user_ids%>
-    </div>
   </div>
   <div class="right-header">
     <div class="header-button">
@@ -19,7 +16,7 @@
 <div class="form">
   <%= form_with model: [@room, @memo], class: 'form-form', local: true do |f| %>
     <div class="form-input">
-      <%= f.text_field :content, class: 'form-memo', placeholder: 'type a memo' %>
+      <%= f.text_field :content, class: 'form-memo', placeholder: '入力してください' %>
       <label class="form-image">
         <span class="image-file">画像</span>
         <%= f.file_field :image, class: 'hidden' %>

@@ -138,16 +138,7 @@ select {
 .field_with_errors {
   display: contents;
 }
-/* .memo-room-form__field--right {
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 4px;
-  transition: .4s;
-  background-color: #38aef0;
-  position: relative;
-  left: 85%;
-}  */
+
 .memo-room-form_-left {
   font-size: 18px;
   font-weight: bold;

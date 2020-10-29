@@ -1,40 +1,47 @@
 .wrapper {
   display: flex;
+  background-color: bisque;
 }
 .side-bar {
-  background-color: #253141;
+  background-color: bisque;
   width: 300px;
   height: 100vh;
 }
 .side-bar-header {
-  height: 100px;
+  height: 90px;
   padding: 0 20px;
-  background-color: #253141;
+  background-color: #08afbb;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .header-name a{
-  font-size: 16px;
+  font-size: 24px;
   color: #FAFAFA;
+  font-family: "Yu Gothic", "游ゴシック", "游ゴシック体";
   text-decoration: none;
 }
 
-.create-room {
-  font-size: 10px;
-}
-
-.create-room a {
-  border: 1px solid lightblue;
-  padding: 14px;
-  color: deepskyblue;
-  text-decoration: none;
-}
+.create-room a{
+    display:block;  
+    background-color: #f72702;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: bold;
+    padding:4px;
+    border-radius: 4px;
+    text-align: center;
+    transition: .4s;
+    text-decoration: none;
+  }
+.create-room a:hover {
+    background-color:  rgb(245, 129, 129);
+  }
 
 .rooms {
-  background-color: #2F3E51;
-  height: calc(100vh - 100px);
+  background-color: #33ceda;
+  height: calc(100vh - 90px);
   padding: 0 20px;
   overflow: scroll;
 }
@@ -45,21 +52,28 @@
 .room-name a {
   text-decoration: none;
   color: white;
+  font-size: 20px;
+  font-family: "Yu Gothic", "游ゴシック", "游ゴシック体";
+  font-weight: bold;
 }
 .memo {
-  background-color: #ffffff;
+  background-color: bisque;
   width: calc(100% - 300px);
+  border-radius: 12px;
 }
 .memo-header {
   height: 100px;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
+  background-color: bisque;
 }
 .header-title {
   color: #333;
-  font-size: 24px;
+  font-size: 30px;
   margin-top: 36px;
+  font-family: "Yu Gothic", "游ゴシック", "游ゴシック体";
+  font-weight: bold;
 }
 
 .header-button {
@@ -68,12 +82,17 @@
 
 .header-button a {
   text-decoration: none;
-  border: 1px solid darkred;
-  color: darkred;
-  padding: 20px;
+  border: 1px solid#f72702;
+  color: #f72702;
+  padding: 10px;
+}
+.header-button a:hover {
+  background-color: #f72702;
+  border-color: #f72702;
+  color: #FFF;
 }
 .memos {
-  background-color: #FAFAFA;
+  background-color: bisque;
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
   overflow: scroll;
@@ -85,7 +104,9 @@
 
 .memo-user {
   color: #434a54;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  padding-left: 10px;
 }
 
 .memo-date {
@@ -98,7 +119,10 @@
   font-size: 12px;
   padding-left: 550px;
 }
-
+.memo-delete a{
+  text-decoration: none;
+  color: #000;
+}
 
 .lower-memo {
   margin-top: 10px;
@@ -107,15 +131,16 @@
 .memo-content {
   color: #434a54;
   font-size: 18px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: flex-start;
+  padding-left: 10px;
 }
 
 .form {
-  background-color: #eb0c0c;
+  background-color:  #08afbb;
   height: 90px;
-  padding: 20px 40px;
+  padding: 20px 25px;
 }
 .form-form {
   display: flex; 
@@ -134,7 +159,7 @@
 }
 
 .form-submit {
-  background-color: #38AEF0;
+  background-color: #f72702;
   border: none;
   color: white;
   font-size: 16px;
@@ -142,16 +167,25 @@
   margin-left: 15px;
   padding: 0 20px;
 }
+.form-submit:hover {
+  background-color: rgb(245, 129, 129);;
+  border-color: #f72702;
+  color: #FFF;
+}
 .form-image {
   font-size: 12px;
-  background-color: lightblue;
+  background-color: rgb(245, 129, 129);
   color: white;
   padding: 12px;
   width: 60px;
   margin: 5px 10px;
   text-align: center;
 }
-
+.form-image:hover {
+  background-color: #f72702;
+  border-color: #f72702;
+  color: #FFF;
+}
 .hidden {
   display: none;
 }
