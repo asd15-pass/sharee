@@ -35,7 +35,7 @@ URL	https://sharee3.herokuapp.com/
   # ルーム作成機能<h5>  
   一つのルームに登録する人数を＋ボタンーボタンで調整できるようにしました  
   また登録するユーザーを増やす際に＋ーボタンをjavascriptを使って作ることで  
-  自由にフォームを増やせるるようにした  
+  自由にフォームを増やせるようにしました  
   GIF ![create_room](https://user-images.githubusercontent.com/70442362/98076496-b59de280-1eb1-11eb-89a7-03542a72cf24.gif)  
 
   # ルーム削除機能<h5>  
