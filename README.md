@@ -26,26 +26,31 @@ URL	https://sharee3.herokuapp.com/
 
 
  # ユーザー管理機能<h5>  
-  パスワードは確認用も含め二回入力するようにしました GIF user_app.gif  
-  ユーザー名を登録をした後は、何回でも変更できるようにしました GIF user_edit.gif 
+  パスワードは確認用も含め二回入力するようにしました  
+  GIF ![user_app](https://user-images.githubusercontent.com/70442362/98076453-9e5ef500-1eb1-11eb-81bf-02ce4cf4a29c.gif)  
+  ユーザー名を登録をした後は、何回でも変更できるようにしました  
+  GIF ![user_edit](https://user-images.githubusercontent.com/70442362/98076357-75d6fb00-1eb1-11eb-93ee-150629d976b0.gif)  
+
 
   # ルーム作成機能<h5>  
   一つのルームに登録する人数を＋ボタンーボタンで調整できるようにしました  
   また登録するユーザーを増やす際に＋ーボタンをjavascriptを使って作ることで  
-  自由にフォームを増やせるるようにした
-  GIF create_room.gif
+  自由にフォームを増やせるるようにした  
+  GIF ![create_room](https://user-images.githubusercontent.com/70442362/98076496-b59de280-1eb1-11eb-89a7-03542a72cf24.gif)  
 
   # ルーム削除機能<h5>  
   必要のなくなったメモだけでなくルームごと削除できるようにして、管理をしやすくしました  
-  GIF room_delete.gif
+  GIF ![room_delete](https://user-images.githubusercontent.com/70442362/98076578-d7976500-1eb1-11eb-87ec-ba6e1580d568.gif)  
 
  # メモ投稿機能<h5>  
   投稿したユーザー名と日付と時間を一つのメモの上段に配置することでいつ誰がこのメモを書いたのかわかりやすくしました。  
-  GIF memo.gif
+  GIF ![memo](https://user-images.githubusercontent.com/70442362/98076604-e8e07180-1eb1-11eb-84cd-4f6ba94c5bd5.gif)  
+
 
  # メモ削除機能<h5>  
   投稿したメモに削除ボタンをつけて、ルームごと消すのではなく、消したいメモだけ削除できるようにしました.  
-  GIF memo_delete.gif
+  GIF ![memo_delete](https://user-images.githubusercontent.com/70442362/98076664-0d3c4e00-1eb2-11eb-9fb3-d96bb1ee8c59.gif)  
+
 
 # 追加実装予定<h5>  
 ユーザー招待機能 , SNS認証  
