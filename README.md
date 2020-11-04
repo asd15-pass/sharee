@@ -28,7 +28,7 @@ URL	https://sharee3.herokuapp.com/
  # ユーザー管理機能
   パスワードは確認用も含め二回入力するようにしました  
   GIF ![user_app](https://user-images.githubusercontent.com/70442362/98076453-9e5ef500-1eb1-11eb-81bf-02ce4cf4a29c.gif)  
-  ユーザー名を登録をした後は、何回でも変更できるようにしました  
+  ユーザー名を登録をした後でも、ユーザー名を変更できるようにしました  
   GIF ![user_edit](https://user-images.githubusercontent.com/70442362/98076357-75d6fb00-1eb1-11eb-93ee-150629d976b0.gif)  
 
 
